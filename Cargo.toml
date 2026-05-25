@@ -37,9 +37,9 @@ log = "0.4"
 anyhow = "1"
 env_logger = "0.11"
 embedded-io-async = "0.7"
-embassy-time = { version = "0.5", features = ["std", "generic-queue-64"] }
-embassy-sync = "0.8"
-embassy-futures = "0.1.2"
+embassy-time = { git = "https://github.com/embassy-rs/embassy.git", features = ["std", "generic-queue-64"] }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy.git" }
+embassy-futures = { git = "https://github.com/embassy-rs/embassy.git" }
 futures-lite = "2"
 rand = "0.10"
 
@@ -106,11 +106,11 @@ members = [
 ]
 
 [workspace.dependencies]
-embassy-futures = { version = "0.1.2", default-features = false }
-embassy-sync = { version = "0.8", default-features = false }
-embassy-time = { version = "0.5", default-features = false }
+embassy-futures = { git = "https://github.com/embassy-rs/embassy.git", default-features = false }
+embassy-sync = { git = "https://github.com/embassy-rs/embassy.git", default-features = false }
+embassy-time = { git = "https://github.com/embassy-rs/embassy.git", default-features = false }
 embedded-io-async = { version = "0.7", default-features = false }
-embassy-net = { version = "0.9", default-features = false }
+embassy-net = { git = "https://github.com/embassy-rs/embassy.git", default-features = false }
 heapless = { version = "0.9", default-features = false }
 domain = { version = "0.11", default-features = false, features = ["heapless"] }
 rand_core = { version = "0.10", default-features = false }
